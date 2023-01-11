@@ -1,0 +1,261 @@
+:root {
+  --purple-bg: #290742;
+  --dark-bg: #170027;
+  --button-bg: #9e6dc2;
+  --white: #fff;
+  --light-purple: #fbf6ff;
+  --green: #4fff4b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body * {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  font-size: 1.6rem;
+  -webkit-font-smoothing: antialiased;
+}
+
+a,
+ul,
+li {
+  text-decoration: none;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+}
+
+.wrapper {
+  width: min(117rem, 100%);
+  margin: 0 auto;
+  padding-inline: 1.6rem;
+}
+
+/* Header =============================== */
+
+section#header {
+  background-color: var(--purple-bg);
+}
+
+section#header .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-block: 6.4rem;
+}
+
+section#header .header nav {
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+}
+
+section#header .header nav li a {
+  font-size: 1.8rem;
+  color: var(--white);
+}
+
+section#header .header form {
+  display: flex;
+  align-items: center;
+}
+
+section#header .header form input[type="search"] {
+  background: var(--dark-bg);
+  color: var(--white);
+  border: none;
+  font-size: 1.4rem;
+  height: 4.4rem;
+  padding-inline: 2.56rem;
+
+  border-radius: 0.4rem 0 0 0.4rem;
+  outline: none;
+}
+
+#menu-hamburguer {
+  display: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+#menu-hamburguer img {
+  width: 3.2rem;
+}
+
+section#header .header form button {
+  border: none;
+  height: 4.4rem;
+  padding-inline: 2.3rem;
+  background-color: var(--button-bg);
+
+  border-radius: 0 0.4rem 0.4rem 0;
+  cursor: pointer;
+}
+
+section#header .header form button:hover {
+  filter: brightness(0.8);
+}
+
+section#header .header form button img {
+  width: 2.4rem;
+}
+
+section#header .hero {
+  display: flex;
+  align-items: flex-start;
+  gap: 3rem;
+
+  padding-bottom: 6.4rem;
+}
+
+section#header .hero > div h2 {
+  font-size: 3.6rem;
+  color: var(--button-bg);
+  margin-bottom: 1.6rem;
+}
+
+section#header .hero > div p {
+  font-size: 1.8rem;
+  color: var(--white);
+  line-height: 2.7rem;
+
+  margin-bottom: 2.4rem;
+}
+
+section#header .hero > div a {
+  display: flex;
+  align-items: center;
+
+  gap: 0.8rem;
+}
+
+/* Header End =============================== */
+
+#rectangle {
+  width: 100%;
+  height: 0.6rem;
+  background-color: var(--green);
+}
+
+/* Content ================================== */
+
+section#content {
+  padding-block: 6rem;
+  background-color: #fbf7ff;
+}
+
+section#content .posts {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  gap: 13rem;
+}
+
+section#content .posts .post-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+section#content .posts .post-1 img {
+  width: 56.9rem;
+}
+
+section#content .post-1 strong {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--dark-bg);
+}
+
+section#content .side-post {
+  display: flex;
+  flex-direction: column;
+
+  gap: 2.39rem;
+}
+
+section#content .side-post .side-post-1 {
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.8rem;
+}
+
+section#content .side-post .side-post-1 strong {
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  line-height: 3.6rem;
+}
+
+section#content .side-post .side-post-2 {
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.8rem;
+}
+
+section#content .side-post .side-post-2 strong {
+  font-size: 2.4rem;
+  line-height: 3.6rem;
+}
+
+section#content .cards {
+  margin-top: 6.379rem;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+section#content .cards .card img {
+  margin-bottom: 1.6rem;
+}
+
+section#content .cards .card > div {
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.8rem;
+}
+
+section#content .cards .card > div strong {
+  font-size: 2.4rem;
+  color: var(--dark-bg);
+}
+
+/* Content End ================================== */
+
+/* Breakpoints */
+@media (max-width: 860px) {
+  section#header .header form {
+    display: none;
+  }
+
+  section#header .header nav {
+    display: none;
+  }
+
+  #menu-hamburguer {
+    display: initial;
+  }
+}
