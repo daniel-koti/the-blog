@@ -17,133 +17,119 @@
     />
   </head>
   <body>
-    <section id="header">
-      <div class="wrapper">
-        <header class="header">
-          <img src="./public/assets/logo.svg" alt="" />
+    <section id="home">
+      <header class="header container">
+        <img src="./public/assets/logo.svg" alt="The Blog Logo" />
 
-          <nav>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Sobre</a></li>
-            <li><a href="#">Categorias</a></li>
-            <li><a href="#">Contato</a></li>
-          </nav>
+        <nav class="menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Sobre</a></li>
+          <li><a href="#">Categorias</a></li>
+          <li><a href="#">Contacto</a></li>
+        </nav>
 
-          <button id="menu-hamburguer">
-            <img src="./public/assets/hamburguer.svg" alt="" />
-          </button>
+        <button id="menu-item" onclick="toggleMenu()"></button>
 
-          <form>
-            <input type="search" name="search" placeholder="Buscar" />
-            <button>
-              <img src="./public/assets/search.svg" alt="" />
-            </button>
-          </form>
-        </header>
+        <form>
+          <input type="search" name="search" id="search" placeholder="Buscar" />
+          <button class="btn-search" type="submit"></button>
+        </form>
+      </header>
 
-        <div class="hero">
-          <div>
-            <h2>
-              Veja o guia definitivo para conquistar seus objetivos como DEV em
-              2022
-            </h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh nibh
-              eu in aliquet ut adipiscing neque. Sed volutpat aenean sit vitae,
-              sed tristique placerat hac.
-            </p>
-            <a href="">
-              Veja mais
-              <img src="./public/assets/arrow-right.svg" alt="" />
-            </a>
-          </div>
-
-          <img src="./public/assets/featured-image.png" alt="" />
+      <div class="hero container">
+        <div>
+          <h1>
+            Veja o guia definitivo para conquistar seus objetivos como DEV em
+            2022
+          </h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh nibh
+            eu in aliquet ut adipiscing neque. Sed volutpat aenean sit vitae,
+            sed tristique placerat hac.
+          </p>
+          <a href="#"> Ver mais </a>
         </div>
+        <img src="./public/assets/featured-image.png" alt="" />
       </div>
     </section>
 
-    <div id="rectangle"></div>
+    <div class="divisor"></div>
 
     <section id="content">
-      <div class="wrapper">
-        <div class="posts">
-          <div class="post-1">
-            <img src="./public/assets/post-1.png" alt="" />
-            <span>Janeiro 04, 2022</span>
-            <strong>Começando no ReactJS em 2022</strong>
+      <div class="posts container">
+        <div class="post-1">
+          <img
+            src="./public/assets/post-1.png"
+            alt="Computador portátil por cima de uma mesa de escritório"
+          />
+          <small>Janeiro 04, 2022</small>
+          <strong>Começando no ReactJS em 2022</strong>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh nibh
+            eu in aliquet ut adipiscing neque. Sed volutpat aenean sit vitae,
+            sed tristique nibh nibh eu in aliquet ut adipiscing neque. Sed
+            volutpat aenean sit vitae, sed tristique. Sed volutpat aenean.
+          </p>
+        </div>
+        <aside class="side-posts">
+          <div class="side-post-1">
+            <small>Janeiro 04, 2022</small>
+            <strong>
+              Conheça as principais técnicas para conseguir uma vaga
+              internacional em programação
+            </strong>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh nibh
               eu in aliquet ut adipiscing neque. Sed volutpat aenean sit vitae,
-              sed tristique nibh nibh eu in aliquet ut adipiscing neque. Sed
-              volutpat aenean sit vitae, sed tristique. Sed volutpat aenean.
+              sed tristique.
             </p>
           </div>
-          <div class="side-post">
-            <div class="side-post-1">
-              <span>Janeiro 04, 2022</span>
-              <strong>
-                Conheça as principais técnicas para conseguir uma vaga
-                internacional em programação
-              </strong>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh
-                nibh eu in aliquet ut adipiscing neque. Sed volutpat aenean sit
-                vitae, sed tristique.
-              </p>
-            </div>
-            <hr />
-            <div class="side-post-2">
-              <span>Janeiro 04, 2022</span>
-              <strong>Veja a evolução do Front-end na prática</strong>
-
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh
-                nibh eu in aliquet ut adipiscing neque.
-              </p>
-            </div>
+          <hr />
+          <div class="side-post-2">
+            <small>Janeiro 04, 2022</small>
+            <strong>Veja a evolução do Front-end na prática</strong>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh nibh
+              eu in aliquet ut adipiscing neque.
+            </p>
           </div>
-        </div>
-
-        <div class="cards">
-          <div class="card">
-            <img src="./public/assets/post-2.png" alt="" />
-            <div>
-              <p>Janeiro 04, 2022</p>
-              <strong>10 dicas para conseguir a vaga desejada</strong>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh
-                nibh eu in aliquet ut adipiscing neque. Sed volutpat aenean sit
-                vitae, sed tristique.
-              </p>
-            </div>
-          </div>
-          <div class="card">
-            <img src="./public/assets/post-3.png" alt="" />
-            <div>
-              <p>Janeiro 04, 2022</p>
-              <strong>Deixe seu código mais semântico com essas dicas</strong>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh
-                nibh eu in aliquet ut adipiscing neque. Sed volutpat aenean sit
-                vitae, sed tristique.
-              </p>
-            </div>
-          </div>
-          <div class="card">
-            <img src="./public/assets/post-4.png" alt="" />
-            <div>
-              <p>Janeiro 04, 2022</p>
-              <strong>Use essas dicas nas suas aplicações mobile</strong>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh
-                nibh eu in aliquet ut adipiscing neque. Sed volutpat aenean sit
-                vitae, sed tristique.
-              </p>
-            </div>
-          </div>
-        </div>
+        </aside>
       </div>
+
+      <!-- <div class="cards container">
+        <div class="card">
+          <img src="./public/assets/post-2.png" alt="" />
+          <small>Janeiro 04, 2022</small>
+          <strong>10 dicas para conseguir a vaga desejada</strong>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh nibh
+            eu in aliquet ut adipiscing neque. Sed volutpat aenean sit vitae,
+            sed tristique.
+          </p>
+        </div>
+        <div class="card">
+          <img src="./public/assets/post-3.png" alt="" />
+          <small>Janeiro 04, 2022</small>
+          <strong>Deixe seu código mais semântico com essas dicas</strong>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh nibh
+            eu in aliquet ut adipiscing neque. Sed volutpat aenean sit vitae,
+            sed tristique.
+          </p>
+        </div>
+        <div class="card">
+          <img src="./public/assets/post-4.png" alt="" />
+          <small>Janeiro 04, 2022</small>
+          <strong>Use essas dicas nas suas aplicações mobile</strong>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh nibh
+            eu in aliquet ut adipiscing neque. Sed volutpat aenean sit vitae,
+            sed tristique.
+          </p>
+        </div>
+      </div> -->
     </section>
+
+    <script src="./scripts/main.js"></script>
   </body>
 </html>

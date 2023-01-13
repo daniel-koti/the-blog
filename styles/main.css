@@ -22,6 +22,7 @@ body * {
 }
 
 body {
+  background: red;
   font-size: 1.6rem;
   -webkit-font-smoothing: antialiased;
 }
@@ -42,220 +43,303 @@ h6 {
   font-family: "Poppins", sans-serif;
 }
 
-.wrapper {
-  width: min(117rem, 100%);
+#home {
+  background: var(--purple-bg);
+  padding: 0 1.6rem 6.4rem;
+
+  overflow-x: hidden;
+}
+
+.container {
+  width: min(116.9rem, 100%);
   margin: 0 auto;
-  padding-inline: 1.6rem;
 }
 
-/* Header =============================== */
-
-section#header {
-  background-color: var(--purple-bg);
-}
-
-section#header .header {
+/* Header */
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  padding-block: 6.4rem;
+  height: 12.8rem;
 }
 
-section#header .header nav {
+.header nav {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+
   gap: 3.2rem;
 }
 
-section#header .header nav li a {
-  font-size: 1.8rem;
+.header nav.open {
+  padding-top: 3.2rem;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 12.8rem;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--dark-bg);
+}
+
+.header nav li {
+  position: relative;
+}
+
+.header nav li::before {
+  content: "";
+  position: absolute;
+  left: -0.6rem;
+  height: 100%;
+  width: 0.2rem;
+
+  transition: background 0.2s;
+}
+
+.header nav li:hover::before {
+  background: var(--green);
+}
+
+.header nav li a {
   color: var(--white);
 }
 
-section#header .header form {
+.header #menu-item {
+  display: none;
+  cursor: pointer;
+  width: 4rem;
+  height: 4rem;
+  border: 0;
+  background: transparent url(../public/assets/hamburguer.svg) no-repeat
+    center/cover;
+}
+
+.header form {
   display: flex;
   align-items: center;
 }
 
-section#header .header form input[type="search"] {
+.header form input {
+  border: 0;
+  height: 4.4rem;
+  font-size: 1.4rem;
+  padding-inline: 2.4rem;
+  border-radius: 0.4rem 0 0 0.4rem;
   background: var(--dark-bg);
   color: var(--white);
-  border: none;
-  font-size: 1.4rem;
-  height: 4.4rem;
-  padding-inline: 2.56rem;
-
-  border-radius: 0.4rem 0 0 0.4rem;
   outline: none;
 }
 
-#menu-hamburguer {
-  display: none;
-  border: none;
-  background-color: transparent;
+.header form button {
   cursor: pointer;
-}
-
-#menu-hamburguer img {
-  width: 3.2rem;
-}
-
-section#header .header form button {
-  border: none;
+  width: 7rem;
   height: 4.4rem;
-  padding-inline: 2.3rem;
-  background-color: var(--button-bg);
-
+  border: 0;
+  background: var(--button-bg) url(../public/assets/search.svg) no-repeat center;
   border-radius: 0 0.4rem 0.4rem 0;
-  cursor: pointer;
 }
 
-section#header .header form button:hover {
-  filter: brightness(0.8);
-}
+/* Hero */
 
-section#header .header form button img {
-  width: 2.4rem;
-}
-
-section#header .hero {
+.hero {
   display: flex;
   align-items: flex-start;
+
   gap: 3rem;
-
-  padding-bottom: 6.4rem;
 }
 
-section#header .hero > div h2 {
-  font-size: 3.6rem;
+.hero > div {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.hero > div h1 {
+  font-size: 3.8rem;
   color: var(--button-bg);
-  margin-bottom: 1.6rem;
+  line-height: 5.4rem;
 }
 
-section#header .hero > div p {
+.hero > div p {
   font-size: 1.8rem;
   color: var(--white);
   line-height: 2.7rem;
-
-  margin-bottom: 2.4rem;
+  margin: 1.6rem 0 2.4rem;
 }
 
-section#header .hero > div a {
-  display: flex;
-  align-items: center;
+.hero > div a {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--button-bg);
 
+  display: flex;
   gap: 0.8rem;
 }
 
-/* Header End =============================== */
+.hero > div a::after {
+  content: url(../public/assets/arrow-right.svg);
+  width: 2.4rem;
+}
 
-#rectangle {
+.hero img {
+  width: 57rem;
+}
+
+/* Divisor */
+
+.divisor {
   width: 100%;
-  height: 0.6rem;
-  background-color: var(--green);
+  height: 0.3rem;
+  background: var(--green);
 }
 
-/* Content ================================== */
-
-section#content {
-  padding-block: 6rem;
-  background-color: #fbf7ff;
+/* Content */
+#content {
+  background-color: var(--light-purple);
+  padding: 6rem 1.6rem;
 }
 
-section#content .posts {
-  display: flex;
-  justify-content: space-between;
+#content .posts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   align-items: flex-start;
 
   gap: 13rem;
+  margin-bottom: 6.4rem;
 }
 
-section#content .posts .post-1 {
+.posts .post-1 {
   display: flex;
   flex-direction: column;
+
   gap: 1.6rem;
 }
 
-section#content .posts .post-1 img {
-  width: 56.9rem;
+.posts .post-1 small,
+.posts aside .side-post-1 small,
+.posts aside .side-post-2 small {
+  font-size: 1.6rem;
 }
 
-section#content .post-1 strong {
+.posts .post-1 strong,
+.posts aside .side-post-2 strong {
   font-size: 2.4rem;
-  font-weight: 700;
-  color: var(--dark-bg);
 }
 
-section#content .side-post {
+.posts .post-1 p,
+.posts aside .side-post-1 p,
+.posts aside .side-post-2 p {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+
+.posts aside {
   display: flex;
   flex-direction: column;
 
-  gap: 2.39rem;
+  gap: 2.4rem;
 }
 
-section#content .side-post .side-post-1 {
+.posts aside .side-post-1,
+.posts aside .side-post-2 {
   display: flex;
   flex-direction: column;
 
   gap: 0.8rem;
 }
 
-section#content .side-post .side-post-1 strong {
+.posts aside .side-post-1 strong {
+  font-size: 2.4rem;
   font-family: "Poppins", sans-serif;
-  font-size: 2rem;
+
   line-height: 3.6rem;
 }
 
-section#content .side-post .side-post-2 {
-  display: flex;
-  flex-direction: column;
-
-  gap: 0.8rem;
+aside hr {
+  border: 0.5px solid #f2e7fa;
 }
 
-section#content .side-post .side-post-2 strong {
-  font-size: 2.4rem;
-  line-height: 3.6rem;
-}
-
-section#content .cards {
-  margin-top: 6.379rem;
-
+#content .cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, 369px);
+
   gap: 3rem;
 }
 
-section#content .cards .card img {
-  margin-bottom: 1.6rem;
-}
-
-section#content .cards .card > div {
+#content .cards .card {
   display: flex;
   flex-direction: column;
 
   gap: 0.8rem;
 }
 
-section#content .cards .card > div strong {
-  font-size: 2.4rem;
-  color: var(--dark-bg);
+.card small {
+  font-size: 1.6rem;
 }
 
-/* Content End ================================== */
+.card strong {
+  font-size: 2.4rem;
+  line-height: 3.6rem;
+}
+
+.card p {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
 
 /* Breakpoints */
-@media (max-width: 860px) {
-  section#header .header form {
-    display: none;
-  }
 
-  section#header .header nav {
-    display: none;
-  }
-
-  #menu-hamburguer {
+@media (max-width: 880px) {
+  .header #menu-item {
     display: initial;
+  }
+
+  .header nav {
+    display: none;
+  }
+
+  .header form {
+    display: none;
+  }
+
+  .hero {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero > div {
+    align-items: center;
+    text-align: center;
+  }
+
+  #content .posts {
+    grid-template-columns: 1fr;
+
+    gap: 2.4rem;
+  }
+
+  .posts .post-1 img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  html {
+    font-size: 54%;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero img {
+    width: 40rem;
+  }
+}
+
+@media (max-width: 364px) {
+  .hero img {
+    width: 30rem;
   }
 }
