@@ -22,7 +22,6 @@ body * {
 }
 
 body {
-  background: red;
   font-size: 1.6rem;
   -webkit-font-smoothing: antialiased;
 }
@@ -200,6 +199,8 @@ h6 {
 #content {
   background-color: var(--light-purple);
   padding: 6rem 1.6rem;
+
+  overflow: hidden;
 }
 
 #content .posts {
@@ -264,7 +265,7 @@ aside hr {
 
 #content .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 369px);
+  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
 
   gap: 3rem;
 }
@@ -273,7 +274,13 @@ aside hr {
   display: flex;
   flex-direction: column;
 
+  align-items: center;
+
   gap: 0.8rem;
+}
+
+.card img {
+  width: 100%;
 }
 
 .card small {
