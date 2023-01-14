@@ -265,7 +265,8 @@ aside hr {
 
 #content .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+  grid-template-columns: repeat(auto-fit, 1fr);
+  align-items: center;
 
   gap: 3rem;
 }
@@ -275,7 +276,6 @@ aside hr {
   flex-direction: column;
 
   align-items: center;
-
   gap: 0.8rem;
 }
 
