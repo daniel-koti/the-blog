@@ -20,10 +20,13 @@ Homepage para um blog
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - HTML e CSS
+- Javascript
 - Git e Github
 
 ## 💻 Projeto
 
-O projecto foi desenvolvido com fins didáticos, com o intuito criar uma homepage para um blog de tecnologia
+O projecto foi desenvolvido com fins didáticos, com o intuito criar uma homepage para um blog de tecnologia.
+
+Como desafio, desenvolvi a parte responsiva da aplicação para que dispositivos móveis consigam acessar.
 
 Feito com ♥ by Daniel Koti
